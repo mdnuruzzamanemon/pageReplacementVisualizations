@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Replacement</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Page Replacement Algorithm Visualization</h1>
+        <form id="input-form">
+          <label for="algorithm">Select Algorithm:</label>
+          <select id="algorithm" required>
+            <option value="FIFO">First-In-First-Out (FIFO)</option>
+            <option value="OPTIMAL">Optimal Page Replacement</option>
+            <option value="LRU">Least Recently Used (LRU)</option>
+            <option value="LFU">Least Frequently Used (LFU)</option>
+          </select>
+    
+          <label for="frames">Number of Frames:</label>
+          <input type="number" id="frames" min="1" required>
+    
+          <label for="sequence">Page Sequence (comma-separated):</label>
+          <input type="text" id="sequence" required placeholder="e.g., 7, 0, 1, 2, 0, 3, 0, 4">
+    
+          <button type="submit">Visualize</button>
+        </form>
+        <div id="visualization"></div>
+      </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
