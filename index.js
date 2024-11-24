@@ -18,8 +18,8 @@ document.getElementById("input-form").addEventListener("submit", function (e) {
       case "LRU":
         visualizeLRU(frames, sequence);
         break;
-      case "LFU":
-        visualizeLFU(frames, sequence);
+      case "CLOCK":
+        visualizeClock(frames, sequence);
         break;
       default:
         alert("Invalid algorithm selected.");
@@ -158,34 +158,35 @@ document.getElementById("input-form").addEventListener("submit", function (e) {
     document.getElementById("visualization").appendChild(table);
   }
 
-  
 
-  function visualizeLFU(frames, sequence) {
+  
+  function visualizeClock(frames, sequence) {
     const table = createTable(frames, sequence);
-    const frameArray = [];
-    const frequency = new Map(); // To track the frequency of each page
+    const frameArray = Array(frames).fill(null); // Holds the pages in frames
+    const useBit = Array(frames).fill(0); // Tracks the use bit for each frame
+    let pointer = 0; // Points to the current position in the circular buffer
     let statusRow = table.rows[frames + 1];
   
     sequence.forEach((page, step) => {
       const frameHit = frameArray.includes(page);
   
       if (!frameHit) {
-        if (frameArray.length >= frames) {
-          // Find the least frequently used page
-          let lfuPage = frameArray.reduce((least, current) => 
-            frequency.get(current) < frequency.get(least) ? current : least
-          );
-  
-          const replaceIndex = frameArray.indexOf(lfuPage);
-          frameArray[replaceIndex] = page;
-        } else {
-          frameArray.push(page);
+        while (useBit[pointer] === 1) {
+          useBit[pointer] = 0; // Reset use bit
+          pointer = (pointer + 1) % frames; // Move pointer in circular fashion
         }
+  
+        // Replace the page at the pointer
+        frameArray[pointer] = page;
+        useBit[pointer] = 1; // Set the use bit for the new page
+        pointer = (pointer + 1) % frames; // Move pointer to next position
+      } else {
+        // Set use bit for the accessed page
+        const index = frameArray.indexOf(page);
+        useBit[index] = 1;
       }
   
-      // Update the frequency of the current page
-      frequency.set(page, (frequency.get(page) || 0) + 1);
-  
+      // Update the table for visualization
       for (let i = 0; i < frames; i++) {
         table.rows[i + 1].cells[step + 1].textContent = frameArray[i] ?? "";
         table.rows[i + 1].cells[step + 1].className = frameArray[i] === page && frameHit ? "hit" : "miss";
