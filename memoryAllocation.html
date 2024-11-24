@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Memory Allocation Visualization</title>
+  <link rel="stylesheet" href="./memAllocStyle.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Memory Allocation Visualization</h1>
+    <div class="inputs">
+      <label for="algorithm">Select Algorithm:</label>
+      <select id="algorithm">
+        <option value="firstFit">First Fit</option>
+        <option value="bestFit">Best Fit</option>
+        <option value="worstFit">Worst Fit</option>
+        <option value="nextFit">Next Fit</option>
+      </select>
+
+      <label for="blockSizes">Block Sizes (comma-separated):</label>
+      <input type="text" id="blockSizes" placeholder="e.g., 100, 500, 200, 300, 600">
+
+      <label for="processSizes">Process Sizes (comma-separated):</label>
+      <input type="text" id="processSizes" placeholder="e.g., 212, 417, 112, 426">
+
+      <button onclick="visualize()">Visualize</button>
+    </div>
+
+    <div id="visualization"></div>
+  </div>
+
+  <script src="./memoAlloScript.js"></script>
+</body>
+</html>
