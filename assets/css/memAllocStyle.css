@@ -1,0 +1,94 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #131414; /* Dark background */
+  color: #eaeaea; /* Light text for better contrast */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #1e1f1f; /* Darker container background */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+  color: #eaeaea; /* Light text */
+}
+
+h1 {
+  text-align: center;
+  color: #f4f4f4; /* Slightly lighter text for heading */
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333; /* Darker border */
+  border-radius: 4px;
+  background-color: #252525; /* Dark input background */
+  color: #eaeaea; /* Light text */
+}
+
+input::placeholder {
+  color: #777; /* Subtle placeholder text */
+}
+
+button {
+  background-color: #007BFF; /* Accent color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker hover effect */
+}
+
+#visualization {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #444 !important; /* Subtle table border */
+  text-align: center !important;
+  padding: 8px;
+  color: #eaeaea; /* Light text */
+}
+
+.table th {
+  background-color: #333 !important; /* Header background */
+}
+
+.table td {
+  background-color: #1e1f1f; /* Cell background matching container */
+}
+
+.miss {
+  background-color: #f5776d !important; /* Miss background (red tone) */
+  color: #fff; /* Light text for contrast */
+}
+
+.hit {
+  background-color: #8fce31 !important; /* Hit background (green tone) */
+  color: #fff; /* Light text for contrast */
+}

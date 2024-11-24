@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #131414; /* Dark background */
+  color: #eaeaea; /* Light text for readability */
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #1e1f1f; /* Dark container background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle darker shadow */
+  color: #eaeaea; /* Light text for readability */
+}
+
+h1 {
+  text-align: center;
+  color: #f4f4f4; /* Slightly lighter heading text */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444; /* Dark border for inputs */
+  border-radius: 4px;
+  background-color: #252525; /* Dark background for inputs */
+  color: #eaeaea; /* Light text for inputs */
+}
+
+input::placeholder {
+  color: #777; /* Subtle placeholder text */
+}
+
+button {
+  background-color: #007bff; /* Blue accent for button */
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker hover color */
+}
+
+#visualization {
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #444 !important; /* Subtle border for table */
+  padding: 8px;
+  text-align: center !important;
+  color: #eaeaea; /* Light text for table cells */
+}
+
+th {
+  background-color: #333; /* Darker header background */
+  color: #f4f4f4; /* Light header text */
+}
+
+.hit {
+  background-color: #3c763d; /* Dark green for hits */
+  color: #fff; /* Light text for contrast */
+}
+
+.miss {
+  background-color: #a94442; /* Dark red for misses */
+  color: #fff; /* Light text for contrast */
+}
+
+.replaced {
+  background-color: #856404; /* Dark yellow for replacements */
+  color: #fff; /* Light text for contrast */
+}
