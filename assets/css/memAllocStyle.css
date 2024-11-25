@@ -46,8 +46,8 @@ input::placeholder {
   color: #777; /* Subtle placeholder text */
 }
 
-button {
-  background-color: #007BFF; /* Accent color */
+/* button {
+  background-color: #007BFF; 
   color: white;
   border: none;
   cursor: pointer;
@@ -55,8 +55,8 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker hover effect */
-}
+  background-color: #0056b3; 
+} */
 
 #visualization {
   margin-top: 20px;
