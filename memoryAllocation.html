@@ -21,10 +21,10 @@
       <script src=
 "https://code.jquery.com/jquery-3.6.0.min.js">
       </script>
-<link
+<!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Barriecito"
-    />
+    /> -->
 </head>
 <body><!-- for navbar -->
     <nav class="navbar sticky-top navbar-expand-xl">
@@ -55,6 +55,28 @@
     </nav>
 
 
+
+<div class="btnContainerWrapper">
+    <div class="btn-container">
+      <div style="--a: 0;" class="btn-sensor sensor-n"></div>
+      <div style="--a: 45;" class="btn-sensor sensor-ne"></div>
+      <div style="--a: 90;" class="btn-sensor sensor-e"></div>
+      <div style="--a: 135;" class="btn-sensor sensor-se"></div>
+      <div style="--a: 180;" class="btn-sensor sensor-s"></div>
+      <div style="--a: 225;" class="btn-sensor sensor-sw"></div>
+      <div style="--a: 270;" class="btn-sensor sensor-w"></div>
+      <div style="--a: 315;" class="btn-sensor sensor-nw"></div>
+      <button class="btn-button" onclick="visualize()">
+        <div class="btn-lid"></div>
+        <div class="btn-pupil"></div>
+      </button>
+      <button class="btn-button" onclick="visualize()">
+        <div class="btn-lid"></div>
+        <div class="btn-pupil"></div>
+      </button>
+    </div>
+  </div>
+
   <div class="container">
     <h1>Dynamic Memory Allocation Visualization</h1>
     <div class="inputs">
@@ -72,7 +94,8 @@
       <label for="processSizes">Process Sizes (comma-separated):</label>
       <input type="text" id="processSizes" placeholder="e.g., 212, 417, 112, 426" required>
 
-      <button type="submit" onclick="visualize()">Visualize</button>
+      
+      
     </div>
 
     <div id="visualization"></div>

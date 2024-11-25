@@ -92,3 +92,12 @@ button:hover {
   background-color: #8fce31 !important; /* Hit background (green tone) */
   color: #fff; /* Light text for contrast */
 }
+.inputs
+{
+  position: relative;
+  z-index: 200;
+}
+
+
+
+

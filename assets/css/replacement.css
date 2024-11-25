@@ -21,10 +21,12 @@ h1 {
   color: #f4f4f4; /* Slightly lighter heading text */
 }
 
-form {
+#input-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  position: relative;
+  z-index: 200;
 }
 
 label {

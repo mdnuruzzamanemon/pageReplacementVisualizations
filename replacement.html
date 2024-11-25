@@ -23,10 +23,10 @@
       <script src=
 "https://code.jquery.com/jquery-3.6.0.min.js">
       </script>
-<link
+<!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Barriecito"
-    />
+    /> -->
 </head>
 
 <body>
@@ -59,9 +59,31 @@
     </div>
   </nav>
 
+
+  <div class="btnContainerWrapper">
+    <div class="btn-container">
+      <div style="--a: 0;" class="btn-sensor sensor-n"></div>
+      <div style="--a: 45;" class="btn-sensor sensor-ne"></div>
+      <div style="--a: 90;" class="btn-sensor sensor-e"></div>
+      <div style="--a: 135;" class="btn-sensor sensor-se"></div>
+      <div style="--a: 180;" class="btn-sensor sensor-s"></div>
+      <div style="--a: 225;" class="btn-sensor sensor-sw"></div>
+      <div style="--a: 270;" class="btn-sensor sensor-w"></div>
+      <div style="--a: 315;" class="btn-sensor sensor-nw"></div>
+      <button class="btn-button" onclick="visualize()">
+        <div class="btn-lid"></div>
+        <div class="btn-pupil"></div>
+      </button>
+      <button class="btn-button" onclick="visualize()">
+        <div class="btn-lid"></div>
+        <div class="btn-pupil"></div>
+      </button>
+    </div>
+  </div>
+
   <div class="container">
     <h1>Page Replacement Algorithm Visualization</h1>
-    <form id="input-form">
+    <div id="input-form">
       <label for="algorithm">Select Algorithm:</label>
       <select id="algorithm" required>
         <option value="FIFO">First-In-First-Out (FIFO)</option>
@@ -76,8 +98,8 @@
       <label for="sequence">Page Sequence (comma-separated):</label>
       <input type="text" id="sequence" required placeholder="e.g., 7, 0, 1, 2, 0, 3, 0, 4">
 
-      <button type="submit">Visualize</button>
-    </form>
+
+    </div>
     <div id="visualization"></div>
   </div>
 

@@ -1,6 +1,6 @@
-document.getElementById("input-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-  
+// document.getElementById("input-form").addEventListener("submit", function (e) {
+//     e.preventDefault();
+function visualize() {
     const algorithm = document.getElementById("algorithm").value;
     const frames = parseInt(document.getElementById("frames").value, 10);
     const sequence = document.getElementById("sequence").value.split(",").map(Number);
@@ -24,7 +24,8 @@ document.getElementById("input-form").addEventListener("submit", function (e) {
       default:
         alert("Invalid algorithm selected.");
     }
-  });
+  }
+  // });
   
   function createTable(frames, sequence) {
     const table = document.createElement("table");
