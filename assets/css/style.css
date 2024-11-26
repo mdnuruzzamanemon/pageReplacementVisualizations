@@ -3,6 +3,7 @@ body {
   padding: 0;
   background-color: #131414 !important;
   font-family: "Barriecito", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 /* code for navbar */
@@ -263,3 +264,8 @@ html {
   }
 }
 
+.navbar-toggler
+{
+  color: #eaeaea !important;
+  font-size: 28px !important;
+}
