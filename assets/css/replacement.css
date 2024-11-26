@@ -47,7 +47,7 @@ input::placeholder {
 }
 
 /* button {
-  background-color: #007bff; /* Blue accent for button */
+  background-color: #007bff; 
   color: white;
   cursor: pointer;
   border: none;
@@ -55,7 +55,7 @@ input::placeholder {
 }
 
 button:hover {
-  background-color: #0056b3; /* Darker hover color */
+  background-color: #0056b3; 
 } */
 
 #visualization {
