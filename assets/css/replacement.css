@@ -81,12 +81,12 @@ th {
 }
 
 .hit {
-  background-color: #3c763d; /* Dark green for hits */
+  background-color: #8fce31; /* Dark green for hits */
   color: #fff; /* Light text for contrast */
 }
 
 .miss {
-  background-color: #a94442; /* Dark red for misses */
+  background-color: #f5776d; /* Dark red for misses */
   color: #fff; /* Light text for contrast */
 }
 
